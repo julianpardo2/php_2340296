@@ -27,7 +27,11 @@ $productos = $_SESSION['productos'];
 </head>
 <body>
     <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
     <center><h1>Lista de Productos</h1></center>
+    <br><br>
+    <a class="btn btn-primary" href="create.php">Agregar Producto</a>
     <br><br>
     <?php
         if (count($productos)>0) {
@@ -51,7 +55,10 @@ $productos = $_SESSION['productos'];
                         echo "<td>$valor->precio</td>";
                         echo "<td>$valor->descripcion</td>";
                         echo "<td><img src='$valor->foto' width='50' height='50'></td>";
-                        echo "<td></td>";
+                        echo "<td>";
+                        echo "<a href='edit.php?id=$indice' class='btn btn-warning me-2'>Editar</a>";
+                        echo "<a href='delete.php?id=$indice' class='btn btn-danger'>Eliminar</a>";
+                        echo "</td>";
                         echo "</tr>\n";
                     }
                     ?>
@@ -62,6 +69,8 @@ $productos = $_SESSION['productos'];
             echo "<h2>No existe Productos</h2>";
         }
     ?>
+    </div>
+    </div>
     </div>
 </body>
 </html>
