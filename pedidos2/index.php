@@ -13,6 +13,7 @@
         <br>
         <center><a href="clientes.php">Gestión de Clientes</a></center><br>
         <center><a href="vistas/productos/index.php">Gestión de Productos</a></center><br>
+        <center><a href="vistas/pedidos/index.php">Gestión de Pedidos</a></center><br>
     </div>
 </body>
 </html>
